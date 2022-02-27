@@ -18,8 +18,7 @@ student_ids = []
 def create_ids():
   student_id = random.randint(111111,999999)
   return student_id
-# #OPTIONAL ENHANCEMENT #2: MAKE SURE IDS AREN'T DUPLICATES.
-###I NEED TO FIGURE OUT HOW TO MAKE SURE THIS FX IS NOT PRINTING DUPES###  
+
 # def create_ids():
 #   list = []
 #   for i in range(5):
@@ -27,6 +26,7 @@ def create_ids():
 #     if student_id not in list:
 #       return student_id  
 # #fx to place randomized student IDs into my student IDs list
+
 def create_id_list():
   for name in student_names:
     student_ids.append(create_ids())
@@ -45,13 +45,11 @@ def create_emails():
     # converting student IDs to a string while also indexing each name in student names - in other words, finding it's position w/in the list.
     sid = str(student_ids[student_names.index(name)])
     len_sid = len(sid)
-    # len_sid-3;len_sid = drop the first 3 characters, and print from that point to the end
-      # I'll need to get re-clarification on why we need to have sid outside the brackets...
+    # len_sid-3;len_sid = drops the first 3 characters, and print from that point to the end
     last_three_sid = sid[len_sid-3:len_sid]
     #adding the first letter of the first name + the last name + the last 3 SID digits to the student emails list.
     student_emails.append(first_last[0][0] + first_last[1] + last_three_sid + "@gmail.com") #ignores last index if one is provided.
-    # student_emails.append(first_last[0][0] + first_last[1] + first_last[2]+ last_three_sid + "@gmail.com") # list index out of range
-    # student_emails.append(first[0] + middle[0] + last + last_three_sid + "@gmail.com") # ValueError: Too many values to unpack
+
 
 create_emails()
 # print(student_emails)
